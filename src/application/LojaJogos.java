@@ -22,8 +22,6 @@ public class LojaJogos {
         try {
             char ch = 'a';
             do {
-                ch = JOptionPane.showInputDialog(null, "Deseja o ingresso de outro jogo além do jogo atual? ", "Jogo"
-                        , JOptionPane.PLAIN_MESSAGE).toUpperCase().charAt(0);
                 String nome = JOptionPane.showInputDialog(null, "Informe o nome do cliente: ", "Nome"
                         , JOptionPane.PLAIN_MESSAGE);
                 if (nome.matches((".*\\d.*"))) {
@@ -44,6 +42,8 @@ public class LojaJogos {
                         , JOptionPane.PLAIN_MESSAGE)));
                 ingresso = new Ingresso(jogo, valor, quantidade);
                 pedido.setQuantidade(quantidade);
+                ch = JOptionPane.showInputDialog(null, "Deseja o ingresso de outro jogo além do jogo atual? ", "Jogo"
+                        , JOptionPane.PLAIN_MESSAGE).toUpperCase().charAt(0);
 
                 pedido.setValor(valor);
 
